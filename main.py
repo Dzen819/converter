@@ -10,8 +10,11 @@ window.config(padx=10, pady=10)
 
 def calculate():
     try:
-        inp = int(input.get())
-        mls = round(inp/1.6, 2)
+        inp = input.get()
+        print(inp)
+        new_inp = float(inp.replace(",", "."))
+        print(new_inp)
+        mls = round(new_inp/1.6, 2)
         calc_text.config(text=mls)
     except:
         calc_text.config(text="Это не число")
